@@ -1,0 +1,25 @@
+%p#notice= notice
+%p
+  %strong Name:
+  = @user.name
+%p
+  %strong Surname:
+  = @user.surname
+%p
+  %strong Age:
+  = @user.age
+%p
+  %strong Picture:
+  = image_tag(@user.picture_url, width:600) if @user.picture.present?
+%p
+  %strong Car:
+  = @user.car
+%p
+  %strong Sex:
+  = @user.sex
+%p
+  %strong Distance:
+  = @user.distance
+= link_to 'Edit', edit_user_path(@user)
+|
+= link_to 'Back', users_path
