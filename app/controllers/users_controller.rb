@@ -10,8 +10,8 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    @comments = @idea.comments.all
-    @comment = @idea.comments.build
+    @comments = @user.comments.all
+    @comment = @user.comments.build
   end
 
   # GET /users/new
