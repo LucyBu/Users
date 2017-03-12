@@ -11,6 +11,20 @@
 %p
   %strong Picture:
   = image_tag(@user.picture_url, width:600) if @user.picture.present?
+
+%h3 Comments
+=@comments.each do |comment|
+  %div
+    %strong
+      = comment.user_name
+    %br
+    %p>
+      = comment.body
+    %p>
+      = link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' }
+= render 'comments/form'
+
+
 %p
   %strong Car:
   = @user.car
