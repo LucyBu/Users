@@ -24,6 +24,8 @@
       %ul{:class=>"nav navbar-nav"}
         %li{:class=>"active"}
           %a{:href=>"/users"}Users
+        %li
+        =link_to 'New user', new_user_path
 
 =yield
 
